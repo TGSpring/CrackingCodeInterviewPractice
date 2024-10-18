@@ -14,7 +14,7 @@ Each chapter is represented by a directory, with solutions to individual questio
 ## **Why I am doing this:**
 
 I am committed to practicing these problems to:
-  * Stregthen my data structures and algorithms knowledge.
+  * Strengthen my data structures and algorithms knowledge.
   * Prepare thoroughly for coding interviews.
   * Develop confidence and fluency in problem-solving under time constraints.
   * Improve my Java coding skills along with critical thinking abilities.
