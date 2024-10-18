@@ -9,12 +9,10 @@
   * This has a complexity of O(n), n is the length of the string. The space complexity is O(1).
   */
 public class Chpt1Questions {
-
     public static void main(String[] args) {
-        
     }
 
-    boolean isUniqueChars(String str) {
+    static boolean isUniqueChars(String str) {
         if (str.length() > 128 ) return false;
 
     boolean[]char_set = new boolean[128];
