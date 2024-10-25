@@ -28,3 +28,20 @@ public class Q1_9 {
         return str.contains(sub);
     }
 }
+/**
+ * Explanation:
+ * 1. Length Check
+ *      If s1 and s2 are not the same length, s2 can not be a rotation of s1.
+ * 2. Concatenation:
+ *      We concatenate s1 with itself, resulting in s1 + s1.
+ *      If s2 is a valid rotation, it will appear as a substring in the concatenated string.
+ * 3. isSubString method:
+ *      We use the String.contains() method in Java as a simple implementation Of
+ * isSubString.
+ * 4. Edge Cases:
+ *      If either string is empty, we return false.
+ *      If both strings are teh same and non-empty the method returns true.
+ * 5. Time complexity:
+ *  O(n) The time complexity of the contains() method, where n is the length of the string.
+ * Space complexity is O(n) Due to the concatenation of s1 + s1.
+ */
