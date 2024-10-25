@@ -1,0 +1,52 @@
+Deeper dive into Chapter 1 concepts.
+Q1.2: Check Permutation
+    Sorting both strings gives a quick way to compare if they contain the same characters.
+        Drawback: O(n log n) is not optimal for larger inputs
+    Character counting:
+        Use an array (or hash table) to store the frequency of each character. Traverse both strings:
+            1. Increment counts for one string
+            2. Decrement counts for the other.
+        If all counts are zero at the end, theyre Permutations.
+    Key Insight:
+        Counting is linear (O(n)) in time complexity and more space-efficient than you might expect. This
+        problem builds intuition about when to use data structures like arrays vs hash tables.
+
+Q1.4: Palindrome Permutation (Bit Vector Trick)
+    1. Use a bit vector
+    2. Toggle bits corresponding to each character:
+        Example: 'a' might toggle the 0th bit, 'b' the 1st bit, exc.
+    3. At the end, at most one bit should be set (odd character count allowed)
+
+    """
+        int bitVector = 0;
+        for (char c : input.toCharArray()) {
+            int mask = 1 << (c - 'a');
+            bitVector ^= mask; //Toggle the bit
+        }
+        return (bitVector & (bitVector - 1)) == 0 //At most one bit set.
+    """
+
+    Why is this useful?
+        Space-efficient: Uses only an integer instead of an array.
+        Introduces bit manipulation.
+
+Q1.5 One Array (Two-Pointer Strat):
+    Two strings are one edit away only if:
+        1. They differ by at most one character (replace case)
+        2. One string is longer by exactly one character (insert or delete case).
+    Single-Pass solution with two pointers:
+        1. Use two pointer, one for each string.
+        2. As you traverse:
+            If the characters don't match, check if an edit is already made.
+            Move pointers carefully to account for length difference.
+    Key Takeaway:
+        The two-pointer strat is essential in many algorithms(like mergesort, linked lists,
+        substring matching).
+
+Q1.8 Zero Matrix (optimal Space use)
+    Problem: If an element in the matrix is 0, set the entire row and column to 0.
+    Naive Solution: Use a separate boolean matrix to mark rows/columns to zero out (O(MxN)space)
+    Optimized Solution: Use the matrix's first row and column to store markers:
+        1. Check if the first row and column need to be zeroed out.
+        2. Use these markers for other rows/columns.
+        3. Zero out the matrix based on the markers.
