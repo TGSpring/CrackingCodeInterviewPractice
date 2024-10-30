@@ -73,3 +73,12 @@ class ListNode {
         this.next = null;
     }
 }
+/**
+ * Explanation
+ * We use a dummy node to keep track of the head of the resulting list.
+ * We iterate through both input lists and sum corresponding digits;
+ * If the sum is greater than or equal to 10, we carry the value to the next digit.
+ * The loop continues until all the digits are processed and the carry is zero.
+ * 
+ * Time complexity: O(n), where n is the length of the longer list.
+ */
