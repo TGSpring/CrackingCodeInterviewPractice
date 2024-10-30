@@ -91,7 +91,7 @@ class ListNode {
 
 /**
  * Explanation
- * We taverse the original linked list.
+ * We traverse the original linked list.
  * If a nodes value is less than x, we add it to the before list.
  * If a nodes value is greater than x, we add it to the after list.
  * After partitioning the two lists, we merge them by connecting the end of the before List
