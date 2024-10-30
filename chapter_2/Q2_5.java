@@ -31,7 +31,7 @@ public class Q2_5 {
         ListNode current = dummy;
         int carry = 0;
 
-        while (l1 != null || l2 != || carry != 0) {
+        while (l1 != null || l2 != null || carry != 0) {
             int sum = carry;
 
             if (l1 != null) {
@@ -53,7 +53,7 @@ public class Q2_5 {
     }
 
     //Helper function to print the linked list
-    public static void printLinst(ListNode head) {
+    public static void printList(ListNode head) {
         ListNode current = head;
         while (current != null) {
             System.out.print(current.data + " -> ");
