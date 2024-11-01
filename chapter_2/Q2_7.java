@@ -18,7 +18,7 @@ public class Q2_7 {
 
         ListNode intersection = findIntersection(head1, head2);
         if (intersection != null) {
-            System.out.println("Intersecting Node: " intersection.data);
+            System.out.println("Intersecting Node: " + intersection.data);
         } else {
             System.out.println("No Intersection");
         }
