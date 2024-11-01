@@ -1,0 +1,57 @@
+
+Chapter 2: Linked List Concepts and Solutions
+Removing Duplicates from an Unsorted Linked List (Q2.1)
+
+Goal: Remove duplicate nodes from an unsorted list.
+Approaches:
+With Buffer: Use a HashSet to track values; time complexity O(n).
+Without Buffer: Use two pointers—one iterates through each element, and the other checks the rest of the list for duplicates.
+Key Takeaway: Using additional data structures like hash tables can optimize duplicate removal, while pointer-based methods allow for solving it without extra space.
+Returning the Kth-to-Last Element (Q2.2)
+
+Goal: Retrieve the k-th element from the end of a linked list.
+Approaches:
+Two-Pointer (Iterative): Maintain a gap of k nodes between two pointers. Once the second pointer reaches the end, the first pointer is at the k-th-to-last element.
+Recursive: Use recursion to backtrack to the k-th-to-last element.
+Key Takeaway: This question often tests understanding of pointer manipulation in linked lists and introduces efficient ways to access elements based on relative positions.
+Deleting a Node in the Middle (Q2.3)
+
+Goal: Given access only to the node to be deleted, remove it without head pointer access.
+Solution: Copy the data from the next node into the current node, then bypass the next node.
+Key Takeaway: Unique question requiring indirect deletion by data manipulation, emphasizing control over node pointers in linked lists.
+Partitioning Around a Value (Q2.4)
+
+Goal: Partition a linked list around a given value x, arranging nodes less than x before those greater than or equal to x.
+Solution: Traverse the list, building two lists: one for nodes < x and one for nodes >= x, then join them.
+Key Takeaway: Demonstrates list restructuring by relative positioning, critical in partitioning, and introduces techniques for rearranging nodes without changing values.
+Adding Two Numbers Represented by Linked Lists (Q2.5)
+
+Goal: Add two numbers stored in reverse order in linked lists, with each node representing a digit.
+Solution:
+Iterative Addition with Carry: Traverse both lists, adding corresponding digits with carry, and store the result in a new list.
+Recursive Solution: Optionally, manage carries and addition using recursive calls.
+Key Takeaway: Highlights linked lists’ utility in numerical representation, while introducing carry-based addition logic.
+Detecting a Palindrome (Q2.6)
+
+Goal: Determine if a linked list is a palindrome.
+Solution:
+Two-Pointer + Stack: Traverse half the list, pushing elements onto a stack, then compare while traversing the second half.
+Recursive Approach: Use recursion to traverse the list from both ends.
+Key Takeaway: Implements stack and recursive techniques to confirm palindromic sequences, emphasizing symmetry detection in linked lists.
+Intersection of Two Linked Lists (Q2.7)
+
+Goal: Determine if two singly linked lists intersect and return the intersecting node.
+Solution:
+Calculate the lengths of both lists, align them, and iterate until finding a common node.
+Key Takeaway: Tests understanding of linked list structures and requires manipulation of list lengths to identify intersections.
+Loop Detection (Q2.8)
+
+Goal: Detect the start of a loop in a linked list if one exists.
+Solution:
+Floyd’s Cycle-Finding Algorithm: Use two pointers (fast and slow) to detect the cycle, then reset one pointer to the head to find the loop start.
+Key Takeaway: Illustrates cycle detection with the Tortoise and Hare approach, commonly used in linked list and cycle detection problems.
+Chapter Review Highlights
+Pointer Manipulation: Mastering pointer operations, especially next manipulations, is crucial.
+Recursion in Linked Lists: Recursive solutions for traversal and backtracking enhance problem-solving flexibility.
+Use of Auxiliary Data Structures: Hash tables (for duplicate removal) and stacks (for palindrome checks) are helpful in simplifying solutions.
+Cycle Detection and Relative Positioning: The Tortoise and Hare algorithm for cycle detection and two-pointer techniques for positional problems are important interview patterns.
