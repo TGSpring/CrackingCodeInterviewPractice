@@ -9,7 +9,7 @@ This repository contains my solutions and code practice for the problems from th
 
 ## **Repository Structure**
 
-Each chapter is represented by a directory, with solutions to individual questions organized in relevant files.
+Each chapter is represented by a directory, with solutions to individual questions organized in relevant files. Each .java file has an explantion of the each solution at the bottom of the file.
 
 ## **Why I am doing this:**
 
