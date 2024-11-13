@@ -97,3 +97,16 @@ public class Q4_3 {
         printLevelLinkedLists(levelListsDFS);
     }
 }
+/**
+ * Explanation:
+ * BFS solution: (createLevelLinkedListBFS): Uses a queue to process each node level by level.
+ * For each level, it creates a linked list and enqueues all children of nodes in the current 
+ * level, ensuring that each level's nodes are processed together.
+ * 
+ * DFS solution(createLevelLinkedListDFS): Uses recursion to track depth.
+ * As each node is visited, it's added to a linked list that corresponds to its depth level,
+ * creating a new linked list when a new level is reached.
+ * 
+ * Time complexity:
+ * O(n) for both BFS and DFS, where n is the number of nodes. Each node is visited once.
+ */
