@@ -78,3 +78,23 @@ public class Q4_4 {
           System.out.println("Is tree 2 balanced? " + isBalanced(root2)); // Output: false
     }
 }
+/**
+ * Explanation:
+ * Definition of balance: A tree is balanced if the height difference between its left
+ * and right subtrees is no more than 1 at every node.
+ * 
+ * Efficient Height Propagation: The checkBalance method calculates the height of Each
+ * subtree while determining if it is balanced, avoiding redundant height recalculations.
+ * 
+ * Early Termination: As soon as an imbalance is detected, the recursion propagates the imbalance 
+ * up eliminating further checks.
+ * 
+ * Time Complexity:
+ * O(n), where n is the number of nodes in the tree. Each node is visited once, and height is
+ * calculated in a bottom-up manner.
+ * 
+ * Comparison to Naive Solution:
+ * A naive approach involves calculating height multiple times for the same node,
+ * resulting in O(n^2) complexity. This implementation avoids that by merging balance checks
+ * with height calculations.
+ */
