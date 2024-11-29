@@ -24,14 +24,15 @@ public class Q5_2 {
             }
 
             //Mulitply the number by 2 and get the integer part.
-            num = num * 2;
+            double r = num * 2;
 
             //If the integer part is 1, append the '1' to the binary string
-            if (num >= 1) {
+            if (r >= 1) {
                 binary.append(1);
-                num -= 1; //Subtract the integer part to keep the fractional part.
+                num = r - 1; //Subtract the integer part to keep the fractional part.
             } else {
                 binary.append(0);
+                num = r;
             }
         }
         return binary.toString();
@@ -74,5 +75,5 @@ public class Q5_2 {
  * 
  * Space Complexity:
  * O(n) as you are storing the resulting binary string. The space complexity is
- * linear with respect to the number of bits generated.
+ * linear with respect to the number of bits
  */
