@@ -1,0 +1,34 @@
+/**
+ * Tyler Spring
+ * 12/4/2024
+ * Chapter 5 Question 5.7
+ * Pairwise Swap.
+ */
+
+
+ Write a function to swap odd and even bits in an integer with as 
+ few instructions as possible. For example:
+    If the binary representation of the number is 101010 (42 in decimal), the 
+    output should be 010101 (21 in decimal).
+
+To swap odd and even bits:
+    Extract the odd bits.
+    Extract the even bits.
+    Shift the odd bits to the even positions.
+    Shift the even bits to the odd positions.
+    Combine the results.
+
+STEPS TO SOLVE:
+    Extract the even bits by performing a bitwise AND with the mask 0xAAAAAAA.
+
+    Extract the odd bits by performing a bitwise AND with the mask 0x5555555.
+
+    Shift the even bits right by 1 to move them to odd positions.
+    Shift the odd bits left by 1 to move them to even positions.
+    Combine the two results using a bitwise OR.
+
+Time Complexity:
+The operation involves constant-time bitwise operations:
+    Extracting bits with mask.
+    Shifting.
+    Combining results with OR. Thus, the solution runs in O(1) time.
