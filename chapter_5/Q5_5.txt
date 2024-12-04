@@ -1,0 +1,67 @@
+This problem requires an explanation rather than a code solution.
+Here is the provided code:
+public static boolean isPowerOfTwo(int n) {
+    return (n & (n - 1)) == 0;
+}
+
+This code is checking if a number n is a power of two. A number is a power of two if it has 
+only a single 1 in its binary representation.
+
+STEP 1:
+Powers of two have exactly one 1 bit in their binary rep.
+1 == 0001
+2 == 0010
+4 == 0100
+8 == 1000
+
+- For a number to be a power of two, all other bits in the binary rep must be 0.
+
+STEP 2:
+Subtracting 1 from n, when you do this:
+The only 1 in n becomes a 0.
+All the bits to the right of it become 1.
+
+    EXAMPLE:
+        n = 4 = 100
+         n - 1 = 3 = 011.
+
+        n = 8 = 1000
+         n - 1 = 7 = 0111.
+
+STEP 3:
+The AND operation compares each bit of n and n - 1:
+If both bits are 1, the result is 1.
+Otherwise, the result is 0.
+
+For a power of two:
+    n and n - 1 have no bits in common. Their binary representations do not 
+    over lap.
+    The result of the AND operation is 0.
+
+    EXAMPLE:
+        n = 4 = 100
+         n - 1 = 3 = 011
+            n & (n - 1) = 100 & 011 = 000 result is 0.
+        
+        n and n - 1 do share some 1 bits.
+        This result of the AND operation is non-zero.
+
+        If n = 5 = 101 and n - 1 = 4 = 100
+            n & (n - 1) = 101 & 100 = 100
+
+STEP 4:
+Returning the result:
+If the result of (n & (n - 1)) == 0, it means n is a power of two.
+Otherwise, n is not a power of two.
+
+
+EDGE CASES:
+If n = 0:
+Binary of 0 is 0000.
+Subtracting 1 gives -1 (in binary 111...111 for 32-bit integers).
+0 & (-1) = 0.
+But by definition, 0 is not considered a power of two, 
+so the method should handle that case separately.
+
+TIME COMPLEXITY:
+The time complexity of the method is O(1), as it involves only a single bitwise operation.
